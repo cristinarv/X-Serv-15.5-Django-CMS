@@ -10,3 +10,7 @@ def inicio_pag(request):
     for pag in list_pags:
         resp += "<li><a href=" + str(pag.id) + ">" +  pag.name +  "</a></li>"
     return HttpResponse(resp)
+def pag(request, id):
+    pag = Pages.objects.get(id=id)
+    resp = pag.name + pag.page
+    return HttpResponse(resp)
