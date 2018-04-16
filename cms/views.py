@@ -1,6 +1,7 @@
 # Cristina del Río 
 from django.shortcuts import render
 from cms.models import Pages
+from django.http import HttpResponse
 
 # Create your views here.
 def inicio_pag(request):
